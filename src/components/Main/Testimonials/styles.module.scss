@@ -1,0 +1,146 @@
+@import "../../../assets/styles/mixins/mixins.scss";
+@import "../../../assets/styles/variables/variables.scss";
+
+.testimonials {
+  padding: 93px 20px 219px 20px;
+
+  background-color: $gray;
+}
+
+.wrapperCarousel {
+  position: relative;
+  max-width: 1441px;
+  margin: 0 auto;
+  display: block;
+}
+
+.prevButton {
+  position: absolute;
+  top: calc(50% - 25px);
+  left: 0;
+  width: 47px;
+  height: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+.nextButton {
+  position: absolute;
+  top: calc(50% - 25px);
+  right: 0;
+  width: 47px;
+  height: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.carousel {
+  &_info {
+    margin-bottom: 39px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  &_title {
+    @include h2-text;
+  }
+  &_text {
+    @include description-text(none);
+  }
+
+  &_review {
+    margin-top: 39px;
+    max-width: 970px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    & > svg {
+      width: 40px;
+      height: 32px;
+    }
+  }
+  &_subtext {
+    @include subtext-text;
+    text-align: center;
+  }
+
+  &_userInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &_userLabel {
+    @include user-label-text;
+  }
+
+  :global {
+    .slick-dots-bottom > li > button {
+      display: none;
+    }
+  }
+}
+
+.userIcons {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: -166px;
+  display: flex;
+  gap: 20px;
+
+  &_icon {
+    padding: 6px;
+    border-radius: 50%;
+    border: 1px solid;
+    border-color: transparent;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &_iconActive {
+    padding: 6px;
+    border-radius: 50%;
+    border: 1px solid;
+    border-color: $green-dark;
+    background-color: $green-ultra-light;
+    transition: all 0.5s ease;
+  }
+}
+
+@media (320px <= width <= 1170px) {
+  .testimonials {
+    padding: 40px 20px 168px 20px;
+  }
+}
+
+@media (320px <= width <= 1100px) {
+  .prevButton {
+    display: none;
+  }
+  .nextButton {
+    display: none;
+  }
+}
+@media (320px <= width <= 540px) {
+  .testimonials {
+    padding: 40px 10px 80px 10px;
+  }
+  .userIcons {
+    display: none;
+  }
+  .carousel {
+    :global {
+      .slick-dots-bottom > li > button {
+        display: block;
+        margin-top: 60px;
+        background-color: $black;
+      }
+      .slick-dots {
+        gap: 30px;
+        height: 10px;
+      }
+    }
+  }
+}

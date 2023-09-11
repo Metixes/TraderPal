@@ -1,0 +1,83 @@
+@import "../../../assets/styles/mixins/mixins.scss";
+@import "../../../assets/styles/variables/variables.scss";
+
+.container {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+  @media (320px <= width <= 768px) {
+    margin: 0 10px;
+  }
+}
+
+.frequently {
+  max-width: 1441px;
+  margin: 0 auto;
+  padding: 94px 0 100px;
+
+  &_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 11px;
+  }
+  &_title {
+    @include h2-text;
+  }
+  &_text {
+    @include description-text(none);
+  }
+  &_questions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    border: none !important;
+    background-color: $white;
+
+    :global {
+      .ant-collapse {
+        border: none !important;
+        &-header {
+          padding: 28px 32px !important;
+
+          background-color: $green-tiny-light;
+          border-radius: 12px !important;
+
+          & > span {
+            @include question-label-text;
+          }
+        }
+        &-content {
+          border: transparent !important;
+
+          &-box {
+            padding: 16px 32px !important;
+            & > p {
+              @include description-text(none);
+              padding: 25px 0 5px;
+              text-align: start;
+            }
+          }
+        }
+        &-item {
+          border: none;
+        }
+        &-expand-icon > span > svg {
+          display: none;
+        }
+        &-arrow {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+
+  @media (320px <= width <= 1170px) {
+    & {
+      padding: 40px 0 40px;
+    }
+  }
+}

@@ -1,0 +1,151 @@
+@import "../../../assets/styles/mixins/mixins.scss";
+@import "../../../assets/styles/variables/variables.scss";
+
+.dashboard {
+  margin: 111px 47px 200px 86px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  &_info {
+    max-width: 560px;
+  }
+
+  &_title {
+    @include h1-text;
+    text-rendering: geometricPrecision;
+  }
+
+  &_description {
+    @include description-text(capitalize);
+    margin: 15px 0 26px;
+  }
+
+  &_link {
+    @include buttonMain;
+    max-width: 304px;
+  }
+
+  &_img {
+    max-width: 898px;
+  }
+
+  &_img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (320px <= width <= 1320px) {
+    & {
+      margin: 50px 47px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px;
+
+      &_info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+      }
+      &_description {
+        @include description-text(capitalize);
+        margin: 15px 0 26px;
+        text-align: center;
+      }
+    }
+  }
+  @media (320px <= width <= 768px) {
+    & {
+      margin: 50px 20px;
+    }
+  }
+}
+.traders {
+  max-width: 1062px;
+  margin: 43px auto 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  &_inner {
+    padding: 10px 0;
+    position: relative;
+    
+    cursor: pointer;
+
+    &:nth-child(1) > svg{
+      width: 166px;
+      height: 42px;
+    }
+    &:nth-child(2) > svg{
+      width: 166px;
+      height: 42px;
+    }
+    &:nth-child(3) > svg{
+      width: 106px;
+      height: 42px;
+    }
+    &:nth-child(4) > svg{
+      width: 120px;
+      height: 42px;
+    }
+    &:nth-child(5) > svg{
+      width: 100px;
+      height: 42px;
+    }
+
+    &::before{
+      position: absolute;
+      content: '';
+      height: 1px;
+
+      left: 50%;
+      right: 50%;
+      bottom: -4px;
+      background-color: $green-dark;
+      transition: .2s ease-in-out;
+    }
+    &:hover::before{
+        left: 0;
+        right: 0;
+        transition: .2s ease-in-out;
+    }
+
+    &:not(:first-child)::after {
+      @include soon-content(right, 0);
+    }
+    &:nth-child(4)::after {
+      @include soon-content(left, 0);
+    }
+    &:nth-child(5)::after {
+      @include soon-content(left, 0);
+    }
+  }
+  @media (320px <= width <= 1024px) {
+    &_inner::before{
+      height: 0;
+    }
+  }
+  @media (320px <= width <= 960px) {
+    margin: 43px auto 50px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    &_inner{
+      &:not(:first-child)::after {
+        @include soon-content(right, calc(50% - 20.5px));
+      }
+      &:nth-child(4)::after {
+        @include soon-content(left, calc(50% - 20.5px));
+      }
+      &:nth-child(5)::after {
+        @include soon-content(left, calc(50% - 20.5px));
+      }
+    }
+  }
+}

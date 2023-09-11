@@ -1,0 +1,242 @@
+@import "../../assets/styles/variables/variables.scss";
+@import "../../assets/styles/mixins/mixins.scss";
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer {
+  padding: 70px 0;
+  background-color: $green-dark;
+
+  &_wrapper {
+    margin: 0 20px;
+  }
+
+  &_info {
+    max-width: 345px;
+    width: 24.5%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &_text {
+    @include description-text(none);
+    color: $white;
+  }
+
+  &_socialLinks {
+    display: flex;
+    gap: 10px;
+
+    &_link {
+      & > img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &_wrapperLinks {
+    max-width: 1075px;
+    width: 75.5%;
+    display: flex;
+    gap: 20px;
+  }
+
+  &_containerLinks {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+
+    background-color: transparent;
+    border: none;
+    :global{
+      .ant-collapse{
+        &-header{
+          padding: 0 !important;
+          background-color: transparent;
+          cursor: auto !important;
+        }
+        &-content{
+          border: none !important;
+          background-color: transparent;
+
+          &-box{
+            padding: 0 !important;
+            background-color: transparent;
+          }
+        }
+        &-item{
+          width: 100%;
+          border: transparent;
+        }
+        &-expand-icon{
+          padding-inline-end: 0 !important;
+          margin-inline-start: 0 !important;
+        }
+        &-expand-icon{
+          display: none !important;
+        }
+        &-expand-icon > span > svg{
+          fill: $white;
+        }
+        &-arrow{
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+
+  &_label {
+    @include footer-label-links-text;
+  }
+  &_wrapperLabel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  &_svgArrow {
+    width: 11px;
+    height: 11px;
+  }
+  &_links {
+    padding: 7px 0;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    border-bottom: 1px solid $white-opac-30;
+  }
+  &_link {
+    @include footer-links-text;
+    padding: 5px 10px;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover{
+      color: $white;
+    }
+  }
+
+  @media (320px <= width <= 1170px) {
+    & {
+      padding: 40px 0;
+    }
+  }
+  @media (320px <= width <= 1060px) {
+    .container {
+      flex-direction: column-reverse;
+    }
+    &_wrapperLinks {
+      flex-direction: column;
+      width: 100%;
+    }
+    &_info {
+      align-items: center;
+      text-align: center;
+      max-width: 100%;
+      width: 100%;
+
+      & > img {
+        max-width: 200px;
+      }
+    }
+    &_containerLinks {
+      width: 100%;
+      text-align: center;
+    }
+    &_label{
+      font-size: 20px;
+    }
+    &_links {
+      display: flex;
+      justify-content: center;
+    }
+    &_svgArrow{
+        display: none;
+    }
+  }
+  @media (320px <= width <= 768px) {
+    &_wrapper{
+      margin: 0 10px;
+    }
+  }
+  @media (320px <= width <= 530px) {
+    &_containerLinks{
+      flex-direction: column;
+      justify-content: center;
+      :global{
+        .ant-collapse{
+          &-header{
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 10px;
+          }
+          &-expand-icon{
+            display: flex !important;
+            justify-content: start;
+          }
+          &-arrow{
+            width: 11px;
+            height: 11px;
+          }
+          &-arrow > svg{
+            width: 12px;
+            height: 12px;
+          }
+        }
+      }
+    }
+    &_links {
+      justify-content: start;
+    }
+  }
+}
+
+.commercial{
+  padding: 47px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: $green-dark-light;
+
+  &_text{
+    @include footer-commercial-text;
+    &:first-child{
+      margin-left: 20px;
+    }
+    &:last-child{
+      margin-right: 20px;
+    }
+  }
+  @media (320px <= width <= 768px) {
+    &{
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      gap: 10px;
+
+      &_text{
+        @include footer-commercial-text;
+        &:first-child{
+          margin-left: 0;
+        }
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import "../assets/styles/variables/variables.scss";
+@import "../assets/styles/mixins/mixins.scss";
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+::-webkit-scrollbar-thumb {
+  background: $green-ultra-light;
+  border-radius: 8px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: Lato sans-serif;
+  line-height: 26px;
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: 400;
+
+  color: #1d1d1b;
+
+  scrollbar-gutter: stable;
+}
+
+.bg {
+  max-width: 100%;
+  margin: 0 auto;
+  max-height: 970px;
+  background-image: url(../assets/images/bg/bg.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: contain;
+}
+
+.body {
+  max-width: 1728px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+.containers {
+  width: 100%;
+  background-color: $white;
+}
+
+@media (768px <= width <= 1024px) {
+  *{
+    font-size: 8px;
+  }
+}
+@media (320px <= width <= 768px) {
+  *{
+    font-size: 7px;
+  }
+  .body {
+    padding: 0 10px;
+  }
+}

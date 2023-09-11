@@ -1,0 +1,111 @@
+@import "../../../assets/styles/mixins/mixins.scss";
+@import "../../../assets/styles/variables/variables.scss";
+
+.container {
+  margin: 0 20px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 50px;
+  @media (320px <= width <= 768px) {
+    margin: 0 10px;
+  }
+}
+
+.getItTouch {
+  max-width: 1367px;
+  margin: 0 auto;
+  padding-top: 77px;
+
+  &_content {
+    max-width: 811px;
+    padding: 18px 0 94px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 47px;
+  }
+  &_info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+  }
+
+  &_title {
+    @include h2-text;
+  }
+  &_text {
+    @include description-text(none);
+  }
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &_inputs {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    &_input {
+      @include inputs-area-text;
+      width: 100%;
+      padding: 10px 16px;
+
+      border: none;
+      outline: none;
+      border-radius: 8px;
+      background-color: $green-ultra-light;
+    }
+    &_area {
+      @include inputs-area-text;
+      width: 100%;
+      padding: 10px 16px 50px 16px;
+
+      border: none;
+      outline: none;
+      resize: none;
+      overscroll-behavior: none;
+      border-radius: 8px;
+      background-color: $green-ultra-light;
+    }
+    &_link {
+      @include buttonMain;
+      padding: 12px 0;
+      max-width: 106px;
+    }
+  }
+  @media (320px <= width <= 1170px) {
+    & {
+      padding-top: 44px;
+    }
+  }
+  @media (320px <= width <= 960px) {
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &_form {
+      align-items: center;
+
+      &_link{
+        padding: 10px 20px;
+      }
+    }
+    &_img {
+      display: none;
+    }
+    &_content {
+      padding: 18px 0 60px;
+      align-items: center;
+      justify-content: center;
+      gap: 47px;
+    }
+    &_info {
+      align-items: center;
+      text-align: center;
+    }
+  }
+}

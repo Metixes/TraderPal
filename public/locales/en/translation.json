@@ -1,0 +1,164 @@
+{
+   "buttonFree" : "Sign up free",
+   "header" : {
+    "Home" : "Home",
+    "Faq" : "Faq",
+    "Pricing" : "Pricing",
+    "Blog" : "Blog",
+    "Contacts" : "Contacts",
+    "Login" : "Login"
+   },
+   "dashboard" : {
+    "title" : "The APPKU That Delivers Real Results",
+    "text" : "Discover the power of Tradiry, the ultimate online APPKU meticulously designed to revolutionize your trading experience. Developed by seasoned professionals with a wealth of expertise, Tradiry empowers you to effortlessly track, analyze, and gain valuable insights from your trades.",
+    "button-text" : "Unleash your trading prowess with"
+   },
+   "appku" : {
+    "title" : "APPKU Features",
+    "label1" : "Multiple Accounts",
+    "text1" : "Effortlessly Manage Multiple Trading Accounts with Advanced Portfolio Management Tools.",
+    "label2" : "Strategies Manager",
+    "text2" : "Our trading system manager will help you to perfect your trading strategy.",
+    "label3" : "Detailed Reporting",
+    "text3" : "A detailed report will help you to identify your mistakes and show the way to avoid losses.",
+    "label4" : "Advanced Stats",
+    "text4" : "Tradiry empowers you to take your trading to the next level by allowing you to create your own customized filters.",
+    "label5" : "Flexible Filters",
+    "text5" : "Unlock Your Trading Potential: Leverage Dynamic Filters to Optimize Every Aspect of Your Trading Journey.",
+    "label6" : "Community Friendly",
+    "text6" : "Tradiry is developing in partnership with the community. We are always open to new ideas."
+   },
+   "traders" : {
+    "title" : "Over 10,000 traders use the APPKU",
+    "text" : "Take your trading to the next level with Tradiry, the all-inclusive platform designed to meet all your trading requirements. Whether you're an experienced trader or a novice, our free trading journal provides you with the essential tools to enhance your trading performance and attain exceptional outcomes. Improve your trading skills with the best online trading journal."
+   },
+   "similarSectionMonitor" : {
+    "title" : "Monitor multiple metrics on multiple accounts",
+    "text" : "More than 30 trading metrics to understand your trading habits. Our system will detect:",
+    "label1" : "What statistically works, so you can make data driven decisions and trade with confidence.",
+    "label2" : "What statistically works, so you can make data driven decisions and trade with confidence.",
+    "label3" : "What market conditions you perform better.",
+    "label4" : "Daily trading habits that can ruin your trading career."
+   },
+   "similarSectionView" : {
+    "title" : "View your past performance anytime",
+    "text" : "The ultimate trade tracker. Track your trades by:",
+    "label1" : "Date (e.g. all trades from 2018-2019).",
+    "label2" : "Instruments (e.g. all trades on AAPL, ESZ16, EURUSD).",
+    "label3" : "What market conditions you perform better."
+   },
+   "similarSectionTrading" : {
+    "title" : "Your trading performance through beautiful reports",
+    "text" : "Advanced reporting for:",
+    "label1" : "Tracking equity growth by date, time, instruments and more.",
+    "label2" : "Intraday performance (designed for day traders).",
+    "label3" : "Longs, shorts, wins, losses, you name it, we track them.",
+    "label4" : "Best times to trade, best market conditions, best instruments, best strategies."
+   },
+   "similarSectionJournal" : {
+    "title" : "Trading journal features for the most diligent trader",
+    "text" : "Beautiful layout and usability to monitor your progress including:",
+    "label1" : "Individual trade and daily journal entries.",
+    "label2" : "Image attachments and full WYSIWYG HTML editor.",
+    "label3" : "Image bank with all your uploaded images.",
+    "label4" : "Auto fills your entries with trading statistics."
+   },
+   "software" : {
+    "title" : "The ultimate APPKU software built to optimize your trading success.",
+    "text" : "Tradiry trading journal available for any markets, and works with trading accounts in all currencies."
+   },
+   "frequently" : {
+      "label1" : "What is APPKU?",
+      "text1" : "As in any business, it’s important to keep track and to monitor the performance  indicators in trading. A good trading journal will help you to learn from your mistakes instead  of stepping on the same rake.",
+      "label2" : "Why is it so important to use a trading journal?",
+      "text2" : "As in any business, it’s important to keep track and to monitor the performance  indicators in trading. A good trading journal will help you to learn from your mistakes instead  of stepping on the same rake.",
+      "label3" : "Can I import my APPKU?",
+      "text3" : "As in any business, it’s important to keep track and to monitor the performance  indicators in trading. A good trading journal will help you to learn from your mistakes instead  of stepping on the same rake.",
+      "label4" : "How much is the APPKU?",
+      "text4" : "As in any business, it’s important to keep track and to monitor the performance  indicators in trading. A good trading journal will help you to learn from your mistakes instead  of stepping on the same rake."
+   },
+   "testimonials" : {
+      "slide1" : {
+         "title" : "Testimonials",
+         "text" : "Interdum et malesuada fames ac ante ipsum",
+         "subtext" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis",
+         "label" : "Ali Tufan",
+         "label-text" : "Product Manager, Apple Inc"
+      },
+      "slide2" : {
+         "title" : "Testimonials",
+         "text" : "Interdum et malesuada fames ac ante ipsum",
+         "subtext" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis",
+         "label" : "Ali Tufan",
+         "label-text" : "Product Manager, Apple Inc"
+      },
+      "slide3" : {
+         "title" : "Testimonials",
+         "text" : "Interdum et malesuada fames ac ante ipsum",
+         "subtext" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis",
+         "label" : "Ali Tufan",
+         "label-text" : "Product Manager, Apple Inc"
+      },
+      "slide4" : {
+         "title" : "Testimonials",
+         "text" : "Interdum et malesuada fames ac ante ipsum",
+         "subtext" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis",
+         "label" : "Ali Tufan",
+         "label-text" : "Product Manager, Apple Inc"
+      },
+      "slide5" : {
+         "title" : "Testimonials",
+         "text" : "Interdum et malesuada fames ac ante ipsum",
+         "subtext" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis",
+         "label" : "Ali Tufan",
+         "label-text" : "Product Manager, Apple Inc"
+      }
+   },
+   "getItTouch" : {
+      "title" : "Get In Touch!",
+      "text" : "Thank you for being part of the Tradiry trading journal community. Together, we can create a powerful tool that empowers traders to achieve their goals and excel in the dynamic world of trading.",
+      "name" : "Name",
+      "email" : "Email",
+      "phone" : "Phone",
+      "message" : "Message",
+      "submit" : "Submit"
+   },
+   "footer" : {
+      "title" : "Get In Touch!",
+      "text" : "Thank you for being part of the Tradiry trading journal community. Together, we can create a powerful tool that empowers traders to achieve their goals and excel in the dynamic world of trading.",
+      "about" : {
+         "label" : "About",
+         "link1" : "About Us",
+         "link2" : "Company History",
+         "link3" : "Sign Up",
+         "link4" : "Login",
+         "link5" : "Features",
+         "link6" : "Crypto Trading Journal",
+         "link7" : "Supported Brokers"
+      },
+      "solutions" : {
+         "label" : "Solutions",
+         "link1" : "Free Account with Twitter",
+         "link2" : "Spreadsheet Trading Journal",
+         "link3" : "Option Trading Journal",
+         "link4" : "Stock Trading Journal",
+         "link5" : "Crypto Trading Journal",
+         "link6" : "Referral Program",
+         "link7" : "Free Account with Google"
+      },
+      "support" : {
+         "label" : "Support",
+         "link1" : "Supported Brokers",
+         "link2" : "Exchanges",
+         "link3" : "Journal Tutorials",
+         "link4" : "Replay Tutorials",
+         "link5" : "Resources",
+         "link6" : "Contact Us",
+         "link7" : "Faq"
+      }
+   },
+   "commercial" : {
+      "label1" : "APPKU - All Rights Reserved.",
+      "label2" : "Terms And Conditions | Privacy Policy"
+   }
+}

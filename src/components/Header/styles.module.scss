@@ -1,0 +1,184 @@
+@import "../../assets/styles/variables/variables.scss";
+@import "../../assets/styles/mixins/mixins.scss";
+
+.header {
+  padding: 22px 47px 22px 143px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &_logo {
+    cursor: pointer;
+  }
+
+  &_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+  }
+
+  &_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 38px;
+  }
+  &_link {
+    @include header-nav-links;
+    padding: 5px;
+
+    list-style-type: none;
+    cursor: pointer;
+  }
+  &_buttonFree {
+    @include buttonFree;
+  }
+
+  &_wrapperBurgerMenu {
+    display: none;
+    padding: 20px 10px;
+    cursor: pointer;
+  }
+
+  &_burgerMenu {
+    position: relative;
+    width: 30px;
+    height: 3px;
+    background-color: $black;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      top: -8px;
+      background-color: $black;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      bottom: -8px;
+      background-color: $black;
+    }
+  }
+
+  &_burgerMenuActive {
+    position: relative;
+    width: 30px;
+    height: 3px;
+    background-color: transparent;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      top: 0;
+      background-color: $black;
+      border-radius: 8px;
+      transform: rotate(45deg);
+      transition: transform 0.3s ease;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      bottom: 0;
+      background-color: $black;
+      border-radius: 8px;
+      transform: rotate(-45deg);
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &_navActive {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: $green-light;
+    scale: 1;
+    transition: transform 0.5s ease;
+    transform: translateX(0);
+    z-index: 2;
+  }
+
+  @media (960px <= width <= 1200px) {
+    & {
+      padding: 22px 0 22px 0;
+    }
+  }
+  @media (960px <= width <= 1040px) {
+    &_nav {
+      gap: 20px;
+    }
+  }
+  @media (320px <= width <= 960px) {
+    & {
+      padding: 22px 0 22px 0;
+
+      &_logo {
+        max-width: 150px;
+      }
+
+      &_nav {
+        gap: 15px;
+      }
+
+      &_wrapper {
+        gap: 15px;
+      }
+    }
+  }
+  @media (320px <= width <= 768px) {
+    & {
+      overflow: hidden;
+      &_wrapperBurgerMenu {
+        display: block;
+        z-index: 2;
+      }
+
+      &_nav {
+        position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background-color: $green-light;
+        transform: translateX(100%);
+        scale: 0;
+        transition: transform 0.5s ease, visibility 2s ease;
+
+        z-index: 2;
+      }
+
+      &_link {
+        border-bottom: 1px solid $green-middle;
+      }
+    }
+  }
+  @media (320px <= width <= 400px) {
+    & {
+      &_logo {
+        max-width: 120px;
+      }
+      &_buttonFree {
+        padding: 10px 10px;
+      }
+    }
+  }
+}

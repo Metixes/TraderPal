@@ -1,0 +1,83 @@
+@import "../../../assets/styles/variables/variables.scss";
+@import "../../../assets/styles/mixins/mixins.scss";
+
+.container {
+  margin: 0 20px 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+
+  @media (320px <= width <= 768px) {
+    margin: 0 10px 0 20px;
+  }
+}
+
+.appku {
+  padding: 90px 0 100px;
+
+  background-color: $green-ultra-light;
+
+  &_title {
+    @include h2-text;
+  }
+  &_list {
+    columns: 2;
+    column-gap: 53px;
+  }
+  &_item {
+    position: relative;
+    & + & {
+      margin-top: 20px;
+    }
+    padding: 14px 29px 14px 46px;
+
+    border-radius: 12px;
+    background-color: $white;
+  }
+  &_icon {
+    position: absolute;
+    width: 66px;
+    height: 66px;
+    top: calc(50% - 33px);
+    left: -33px;
+  }
+  &_label {
+    @include main-label-text;
+  }
+  &_text {
+    @include description-text(capitalize);
+    max-width: 575px;
+  }
+
+  @media (320px <= width <= 1215px) {
+    & {
+      &_list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      &_item {
+        & + & {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  @media (320px <= width <= 1170px) {
+    & {
+      padding: 40px 0;
+    }
+  }
+  @media (320px <= width <= 768px) {
+    & {
+      &_icon {
+        position: absolute;
+        width: 33px;
+        height: 33px;
+        top: calc(50% - 16.5px);
+        left: -16.5px;
+      }
+    }
+  }
+}
